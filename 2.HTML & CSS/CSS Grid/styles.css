@@ -1,7 +1,13 @@
+*{
+
+    margin: 0px ;
+    padding: 0px ;
+
+}
+
 body{
     background-color: goldenrod ;
-    margin: 0px ;
-    padding: 0 px ;
+
 }
 
 /* 
@@ -21,13 +27,22 @@ Grid Area
 .container{
      border: 6px solid black ;        
      display: grid  ;
-     /* grid-template-columns: repeat(2,200px) 300px ; */
-     grid-template-columns: 1fr 2fr 1fr ;
+
+     height:  100vh ;
+     grid-template: repeat(3,200px) / repeat(3,300px) ;
+     /* grid-template-columns: 1fr 2fr 1fr ; */
      /* Column width's */
 
-     grid-template-rows: 100px 200px 100px ;
-     
+     /* grid-template-rows: 100px 200px 100px ; */
+     /* grid-template  -  Short hand for grif-template-cols and rpws*/
+     /* gap: 5px 10px ; */
+     /* justify-items: center ; */
+      /* align-items: end ;  */
 
+     /* place-items - shorthand for justify-items and align-items ; */
+     justify-content: space-around;
+     align-content: space-around;
+     /* place-content */
 }
 
 .grid-item{
