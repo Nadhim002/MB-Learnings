@@ -1,0 +1,76 @@
+body{
+    background-color: goldenrod ;
+    margin: 0px ;
+    padding: 0 px ;
+}
+
+/* 
+
+Grid Container
+Grid items 
+
+Grid Line 
+Grid Cell 
+Grid Track
+Grid Area
+
+*/
+
+/*  */
+
+.container{
+     border: 6px solid black ;        
+     display: grid  ;
+     /* grid-template-columns: repeat(2,200px) 300px ; */
+     grid-template-columns: 1fr 2fr 1fr ;
+     /* Column width's */
+
+     grid-template-rows: 100px 200px 100px ;
+     
+
+}
+
+.grid-item{
+    color: white;
+    font-size: 1.5rem ;
+    padding: 1rem ;
+    text-align: center ;
+
+}
+
+.item-01{
+    background-color: blue;
+}
+
+.item-02{
+    background-color: aqua;
+}
+
+
+.item-03{
+    background-color: pink;
+}
+
+.item-04{
+    background-color: yellow;
+}
+
+.item-05{
+    background-color: red;
+}
+
+.item-06{
+    background-color: brown;
+}
+
+.item-07{
+    background-color: violet;
+}
+
+.item-08{
+    background-color: green;
+}
+
+.item-09{
+    background-color: cyan;
+}

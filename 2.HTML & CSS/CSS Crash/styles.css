@@ -1,0 +1,60 @@
+/* Element Selector */
+
+h3{
+    color: green;
+}
+
+/* Selecting Universal */
+*{
+    color: rgba(0, 10, 255, 1.5);
+}
+
+/* Selecting by Class */
+.fail{
+    color: red;
+}
+
+.pass{
+    color: green;
+}
+
+/* Selecting by ID */
+
+#test{
+    color: darkblue;
+}
+
+.orange{
+    background-color: orange;
+    text-align: center;
+    line-height: 2 ;
+    letter-spacing: 4px ;
+    word-spacing: 20px ;
+}
+
+.yellow{
+    background-color: yellow;
+    text-align: right;
+}
+
+.font-styles{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 50px;
+}
+
+/* List Styling */
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Color formats
+#000000 - for black
+#ffffff - for white
+rgba(0,0,0,opacity)
+*/

@@ -1,0 +1,146 @@
+/* Box Model 
+
+In web Design Everything is a box
+
+4 parts of Box Model
+
+Margins , borders , padding and content */
+
+.box-model{
+    border: 5px solid red;
+    height: 50px;
+    width: 200px;
+    padding: 20px ;
+    margin: 20px ;
+}
+
+/* Cascade 
+
+The lastest one in CSS will work 
+Unless the rule applier is in-line Styler
+
+*/
+
+/*
+
+Inline Styling > Internal Styling ==
+
+> ID Selector > Class Selector > Element selector 
+
+use !important to break the specificity 
+
+*/
+
+#specsID{
+    color: blue;
+}
+
+.specs{
+    color: yellow !important ;
+}
+
+h2{
+    color: red;
+    
+}
+
+/* Inheritance */
+
+ .inheritance{
+    color: coral;
+    font-size: 20px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+ }
+
+
+ /* Styling Tables */
+
+th,td{
+    border: 2px solid brown;
+}
+
+td{
+    text-align: center;
+    /* height: 50px ; */
+    vertical-align: bottom;
+    padding: 15px ;
+    border-bottom: 1px solid yellow ;
+}
+
+ table{
+    border-collapse: collapse ;
+    width: 60% ;
+} 
+
+/* Display 
+Inline vs Block 
+We can change inline to block vice versa
+use none - to hide the elemenet 
+
+*/
+
+.content_one{
+
+    border: 2px solid red ;
+    display: inline ;
+
+}
+
+.content_two{
+    border: 2px solid green ;
+    display: block;
+}
+
+/*
+
+Position Property
+
+- Static
+- Relative
+- Fixed
+- Absolute
+- Sticky
+
+*/
+
+.position_one{
+   border: 1px solid blue;
+   position: relative ;
+   top: 35px;
+   left: 50px; 
+}
+
+.position_two{
+   border: 1px solid pink;
+   position: sticky;
+}
+
+.position_three{
+    border: 1px solid pink;
+    position: fixed ;
+    bottom: 0;
+    left: 0 ;
+}
+
+.position_four{
+    border: 1px solid pink;
+    position: absolute ;
+    bottom: 0;
+    right: 0 ;
+}
+
+.position_five{
+    border: 1px solid blue;
+    position: absolute ;
+    bottom: 0px;
+    right: 0px;
+}
+
+.container{
+    position: relative;
+    border: 5px solid maroon ;
+    width: 200px ;
+    height: 1500px;
+}
+
+/* CSS Units */

@@ -1,0 +1,132 @@
+body{
+    margin: 0px;
+}
+
+.container{
+    border: 6px solid #000000 ; 
+     display: flex ;  
+
+     height: 400px ;
+     /* flex-direction: column ;
+     flex-wrap: wrap; */
+     
+     /* flex-flow: column wrap-reverse; */
+     /* height: 400px ;
+     flex-direction: row ; */
+     /* column-gap: 20px;
+     row-gap: 10px ; */
+
+     /* justify-content: space-evenly; */
+     /* align-items: baseline ;
+     
+     flex-wrap: wrap ;
+     align-content: space-around ; */
+
+
+     /*
+     Flex Item Properties 
+
+     - Order
+     - Flex grow
+     - Flex Shrink
+     - Flex-basis 
+
+     - flex-poperty - cobination of above three
+     - align self
+
+     */
+
+     /* 
+     
+     order - priority to come at end 
+     deault is zero 
+
+     flex-grow - Where more is avaible it will split based 
+     on their flex-grow factor 
+
+     Value is relative to each other
+
+     defult is zero 
+
+
+     flex-shring - Same as flex-grow but shrinks 
+
+     default is one 
+
+     flex-basics - to set initail siz eof the flex item  
+      - auto ,  
+     
+      flex - cobination of flex-grow flex-shrink flex-basis
+    
+      align-self - to align the individual elements
+      deafult auto - mostly inherits from parent 
+      
+     */
+
+}
+
+.flex-item{
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    /* flex-grow: 1 ; */
+    /* flex-shrink: 0 ; */
+    /* To stop shrinking  */
+
+    /* width: 100px ; */
+}
+
+.item-01{
+    background-color: blue;
+    /* flex-grow: 1 ; */
+    /* flex-shrink : 0 ; */
+    /* flex-basis: 200px ; */
+
+    flex: 1 0 200px ;    
+}
+
+.item-02{
+    background-color: aqua;
+    /* flex-grow: 3 ; */
+    align-self: center ;
+    
+}
+
+
+.item-03{
+    background-color: pink ;
+    /* order: 1 ; */
+    flex-shrink: 4 ;
+    align-self: flex-end ;
+}
+
+.item-04{
+    background-color: yellow ;
+    /* flex-grow: 1 ; */
+    align-self: flex-start ;
+}
+
+.item-05{
+    background-color: red;
+}
+
+.item-06{
+    background-color: brown;
+}
+
+.item-07{
+    background-color: violet;
+    order: 2 ;
+}
+
+.item-08{
+    background-color: green;
+}
+
+.item-09{
+    background-color: cyan;
+    order: 1 ;
+}
+
+

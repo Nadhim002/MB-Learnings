@@ -1,0 +1,42 @@
+/* @media print{
+    
+    h1{
+        color: blue ;
+    }
+}
+
+@media print and (orientation:landscape) {
+    h1{
+        color: yellow ;
+    } 
+
+    */
+
+
+.body{
+    margin: 0px;
+    padding: 0px ;
+}
+
+.container{
+    display: flex ;
+    justify-content: space-between ;
+    flex-wrap: wrap; 
+}
+
+.items{
+    margin: 5px;
+    height: 100px;
+    width: 100px ;
+    background-color: gray ;
+    flex-basis: 20% ;
+}
+
+
+@media screen and (max-width :800px ) {
+
+    .items{
+        flex-basis : 50% ; 
+    }
+    
+}
