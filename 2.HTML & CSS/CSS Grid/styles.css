@@ -29,7 +29,7 @@ Grid Area
      display: grid  ;
 
      height:  100vh ;
-     grid-template: repeat(3,200px) / repeat(3,300px) ;
+     /* grid-template: repeat(3,200px) / repeat(3,300px) ; */
      /* grid-template-columns: 1fr 2fr 1fr ; */
      /* Column width's */
 
@@ -40,9 +40,16 @@ Grid Area
       /* align-items: end ;  */
 
      /* place-items - shorthand for justify-items and align-items ; */
-     justify-content: space-around;
-     align-content: space-around;
+     /* justify-content: space-around;
+     align-content: space-around; */
      /* place-content */
+
+
+         grid-auto-flow: row ;
+       /*To set the flow of grid  */
+        grid-auto-columns: 100px ;
+        grid-template-rows: 100px ;
+       /* To set the size of the   */
 }
 
 .grid-item{
