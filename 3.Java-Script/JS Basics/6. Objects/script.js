@@ -57,7 +57,8 @@ console.log(objLiteral) ;
 
 let animal = {
     id : "dog" ,
-    sound : () => console.log("bark")  
+    sound : () => console.log("bark")  , 
+    soundAdv(){ console.log("bark Advanced") }
 }
 
 animal.sound() ; 

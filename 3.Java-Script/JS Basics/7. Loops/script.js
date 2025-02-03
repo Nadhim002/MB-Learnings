@@ -1,82 +1,96 @@
-/* Data Types */
-
-/* 
-1. undefined
-2. null 
-3. boolean
-4. number
-5. string
-6. symbol 
-7. Object 
-*/ 
+/* While loop 
 
 
-/* 
+while( condition ){
 
-1. Undefined is the datatypes that is initially assigned to every variables
-2. null - Represents intentional absence of value
-3. boolean - true or false
-4. number - 4 , 4.5 , Nan 
-console.log(a[0]) ; 
+# Do Something 
+Donnot forget to break or increment or decrement 
 
-// Negative indexing is not allowed in JS
-5. string - "Hello World"
-6. symbol - Symbol('description');  // Always unique, even with same description
-7. Object - array , function , map 
+}
 
 */ 
 
-// To find the types of variable use =>  console.log( typeof variable ) ; 
+let w = 0
 
-let str = "This is a string" ; 
+while ( w < 10 ){
 
-console.log( typeof str ) ;  
+    if (w==5){
+        w++
+        continue
+    }
+    console.log(w)
+    w++ 
+
+}
+
+console.log("------------------------------")
+
+/* Do While
+
+do (
+# Do Something
+)while{condition}
+
+*/
 
 
-console.log("-----------------") ;  
+let d = 0 
 
-/* Type Coersion */
+do{
+    console.log("Inside do while")
+}while(
+    d!=0
+) 
 
-console.log("1" + 5 ) ; // string to number
-console.log( 1 + "one" )  ; //  number to string
-console.log(true + 1 ) ; // boolean to number
+console.log("------------------------------")
+/* for-loop 
+
+for( initialise , condition , increment / decrement ){
+    # Do Something    
+}
+
+*/
+
+for (let i = 0 ; i < 10 ; i++ ){
+    if (i==7){break }
+    console.log(i) 
+}
+
+console.log("------------------------------")
+
+/* for of vs for in 
+
+for of is for Used to iterate over the enumerable properties of an object.
+
+for in for arrays - Used to iterate over the elements in the ieterable 
+
+*/
+
+const obj = {
+    id : "nadhim" , 
+    age : 20 , 
+    food : () => console.log("eats rice")
+}
+
+for ( let prop in obj){
+    console.log(prop) ; 
+    console.log(obj[prop] )
+    console.log("**** ")
+}
+
+const arr = [1,2,3,4,5] ; 
 
 
-console.log("-----------------") ; 
+/*
 
-// true is 1 in number
-// false is 0 in number
+for (let a of arr){
+    console.log(a)
+}
 
+// It will print the index of the array instead of the elements
 
-/* Increment and decremnet in JS */
-
-let a = 1 ; 
-console.log(a) ;  
-
-a++ ; 
-console.log(a) ; 
-
-a-- 
-console.log(a) ; 
-
-console.log("-----------------") ; 
-
-/* Arithmric operators */
-
-let x = 7 ;
-let y = 13 ; 
-
-console.log(x+y) ;
-console.log(x-y) ; 
-console.log(x*y) ;
-console.log(x/y) ;
-console.log(y%x) ;   // Modulo operator
-
-console.log("-----------------") ; 
-
-/* Augumented Opeartors */
-
-x+= 1 ; 
-console.log(x) ; 
-
+*/
+for (let a of arr){
+    console.log(a)
+}
 
