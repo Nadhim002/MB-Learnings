@@ -1,31 +1,34 @@
 let output ; 
 
-//depreceated one 
-output = document.all
 
-// We can acess elements by index , similar to array in JS
-output = document.all.length
+const parentElement = document.querySelector(".parent")
 
-// Will give the whole html
-output = document.documentElement
+parentElement.style.border = " 1px solid black "
 
-// to have only the body
-output = document.body
+console.log( parentElement )
 
-// To have childrens of given tag
-output = document.body.children
+// to get the first children
+console.log( parentElement.firstElementChild )
 
-// to get the domain's ip
-output = document.domain
- 
-// to get the collection of forms
-output = document.forms
+// to get the last children
+console.log( parentElement.lastElementChild )
 
-// Changind ID of the form
-document.forms[0]["id"] = "pee-id" 
-document.forms[0].className = "pee-class" 
+output = parentElement.children[1].nodeName // DIV
 
-// To get the classes of the form
-output = document.forms[0].classList
+parentElement.children[1].innerText = "Changed Child 2"
 
-console.log(output)
+
+console.log("******************")
+
+// To access parent from Child 
+
+const sampleChild = document.querySelector(".child:nth-child(2)")
+
+// acess parent from child
+output = sampleChild.parentElement
+
+sampleChild.nextElementSibling.style.color = "blue"
+
+sampleChild.previousElementSibling.style.color = "pink"
+
+console.log( output)
