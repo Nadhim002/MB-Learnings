@@ -21,5 +21,7 @@ const pThree =  function(){ return new Promise( (resolve,reject)=>
 // Promise.any - Returns the first resolved/sucess promise or Array of errors
 
 // if all promises fails Return AggregateError: All promises were rejected 
-Promise.any([ pOne , pTwo , pThree() ]).then( (output) => console.log(output)).catch( (err) => console.error(err + " 123 ") )
+Promise.any([ pOne , pTwo , pThree() ]).then( (output) => console.log(output)).catch( (err) => console.error(err ,"------" , err.errors ) ) 
+
+// err.erros will return array error objects
 

@@ -14,3 +14,10 @@ promise.any() - will wait for first resolved promise or it give iterable of reje
 
 
 */ 
+
+
+## Promise is settled means we got the result 
+
+- It can be either be sucess or failure
+- It can be fullfilled or rejected
+- It can be resolved or reject
