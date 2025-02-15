@@ -1,5 +1,3 @@
-I'm happy to provide detailed answers to the theoretical questions to help you understand asynchronous JavaScript more thoroughly.
-
 ### 1. The JavaScript Event Loop and Asynchronous Operations
 
 The JavaScript event loop is the mechanism that enables JavaScript to perform non-blocking operations despite being single-threaded. Here's a comprehensive explanation:

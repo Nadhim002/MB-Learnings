@@ -1,0 +1,66 @@
+/* 
+
+<!-- before begin -->
+
+<p> 
+
+<!-- after begin -->
+
+lorium
+
+<!-- before end -->
+
+</p>
+
+<!-- after end -->
+
+*/ 
+
+
+// Insert Adjacent Element
+
+function adjElement(){
+
+    const head = document.createElement('h3')
+    head.appendChild( document.createTextNode("This is head Element") )
+
+    document.querySelector("ul").insertAdjacentElement( "beforebegin" , head)
+
+}
+
+// Insert Adjacent text node 
+
+function adjtext(){
+
+    document.querySelector("ul").insertAdjacentText( 
+        "beforeend" , "Hello World" )
+
+}
+
+// Insert Adjacent html
+
+function adjHtml(){
+
+    document.querySelector("button").insertAdjacentHTML( 
+        "beforeend" , "<div>Hello</div>")
+
+}
+
+function insertionBeforeElementUsingparent(){
+
+    const parent = document.querySelector("ul")
+    const child =  document.querySelector("li:nth-child(3)")
+
+    const elementToAdd = document.createElement("li")
+    elementToAdd.innerText = "Bello"
+
+    parent.insertBefore(  elementToAdd , child  )
+
+}
+
+adjElement()
+adjHtml()
+adjtext()
+
+
+insertionBeforeElementUsingparent()
