@@ -22,6 +22,7 @@
       </header>
       <form id="item-form">
         <div class="form-control">
+          <!-- Text Input -->
           <input
             type="text"
             class="form-input"
@@ -30,6 +31,17 @@
             placeholder="Enter Item"
           />
         </div>
+        <!-- Select Input -->
+        <select id="priority-input" name="priority" class="form-input">
+          <option value="0">Select Priority</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <!-- Checkbox Input -->
+
+        <input type="checkbox" id="checkbox" /> Recurring Item
+
         <div class="form-control">
           <button type="submit" class="btn">
             <i class="fa-solid fa-plus"></i> Add Item
@@ -73,9 +85,9 @@
         </li>
       </ul>
 
-      <button id="clear" class="btn-clear" draggable="true">Clear All</button>
+      <button id="clear" class="btn-clear">Clear All</button>
     </div>
 
-    <script src="keyboard-events.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
