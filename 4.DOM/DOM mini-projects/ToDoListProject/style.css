@@ -1,0 +1,31 @@
+.heading{
+    color: red;
+    text-align: center 
+}
+
+.main-container{
+    display: flex ;
+    flex-direction: column;
+    align-items: center ;
+}
+
+.toDoAdder{
+    /* width: 50% ; */
+}
+
+.single-item{
+    display: flex ;
+    gap: 20px ;
+}
+
+.edit-icon{
+    border: 1px solid yellow ;
+}
+
+.delete-icon{
+    border: 1px solid red ;
+}
+
+.save-icon{
+    border: 1px solid green ;
+}
