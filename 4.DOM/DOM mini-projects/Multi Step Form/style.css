@@ -1,0 +1,16 @@
+*{
+    padding: 0px ;
+    margin: 0px ;
+}
+
+.main-container{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 5vw ;
+}
+
+.form-container{
+    display: flex ;
+    padding: 1rem ;
+}
