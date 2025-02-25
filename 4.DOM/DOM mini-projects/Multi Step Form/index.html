@@ -4,37 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multi Step Form</title>
-    <link rel="icon" href="assests/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="icon" href="assests/favicon.svg" type="image/svg+xml" /> -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="main-container">
       <div class="form-container">
-        <div class="steps">
-          <div class="step">1</div>
-          <div class="step">2</div>
-          <div class="step">3</div>
-          <div class="step">4</div>
-        </div>
+        <aside class="steps">
+          <div class="step">
+            <div class="index">1</div>
+            <div class="title">
+              <p>STEP 1</p>
+              <h3>YOUR INFO</h3>
+            </div>
+          </div>
+          <div class="step">
+            <div class="index">2</div>
+            <div class="title">
+              <p>STEP 2</p>
+              <h3>SELECT PLAN</h3>
+            </div>
+          </div>
+          <div class="step">
+            <div class="index">3</div>
+            <div class="title">
+              <p>STEP 3</p>
+              <h3>ADD-ONS</h3>
+            </div>
+          </div>
+          <div class="step">
+            <div class="index">4</div>
+            <div class="title">
+              <p>STEP 4</p>
+              <h3>SUMMARY</h3>
+            </div>
+          </div>
+        </aside>
+
         <div class="content">
-
           <div class="step-content">
-                <form action="">
+            <form action="" class="form-field">
+              <div class="form-description">
+                <h2>Personal Info</h2>
+                <p>
+                  Please provide your name, email, address, and phone number.
+                </p>
+              </div>
 
-                    <h2>Personal Info</h2>
-                    <p>Please provide your name, email, address, and phone number.</p>
+              <div class="input-field">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  placeholder="e.g. Mohammed Nadhim"
+                  name="name"
+                />
+              </div>
 
-                </form>
+              <div class="input-field">
+                <label for="mail-id">Email Address</label>
+                <input
+                  type="text"
+                  placeholder="e.g. nadhim@mountblue.tech"
+                  name="mail-id"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name">Phone Number</label>
+                <input
+                  type="number"
+                  placeholder="e.g. +91 98765 43210"
+                  name="name"
+                />
+              </div>
+            </form>
           </div>
 
           <div class="buttons">
-                <button>Sample</button>
+            <button>Go back</button>
+            <button>Next Step</button>
           </div>
-
         </div>
+
+        <div class="hidden" ></div>
+
       </div>
     </div>
 
     <script src="script.js"></script>
+
   </body>
 </html>

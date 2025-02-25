@@ -1,16 +1,97 @@
-*{
-    padding: 0px ;
-    margin: 0px ;
+* {
+  padding: 0px;
+  margin: 0px;
 }
 
-.main-container{
-    display: flex ;
-    justify-content: center;
-    align-items: center;
-    padding: 10vh 5vw ;
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 5vw;
+  background-color: grey;
 }
 
-.form-container{
-    display: flex ;
-    padding: 1rem ;
+.form-container {
+  display: flex;
+  padding: 1rem;
+  background-color: white;
+  gap: 2vw;
 }
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 2rem ;
+  background-image: url("assests/bg-sidebar-desktop.svg") ; 
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 5px ;
+
+  gap: 2vh ;
+
+}
+
+.step {
+  display: flex;
+  flex-direction: row ;
+  justify-content: flex-start ;
+  gap: 1.5vw ;
+}
+
+.index {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white; 
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px;
+}
+
+/*  */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
+  padding: 4rem 2rem ;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.form-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.input-field input {
+  padding: 0.75rem ;
+}
+
+.buttons{
+  display: flex ;
+  justify-content: space-between ;
+
+}
+
+.buttons button{
+  padding: 15px ;
+}
+
+
+
+
+/* .hidden{
+  visibility: hidden;
+} */
