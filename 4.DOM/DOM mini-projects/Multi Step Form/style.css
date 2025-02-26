@@ -146,3 +146,39 @@
 .go-back-button {
   visibility: hidden;
 }
+
+
+ /* page 04 */
+
+ .price-summary{
+  display: flex ;
+  flex-direction: column ;
+  background-color: aqua;
+
+  width: 70% ;
+
+ }
+
+ .price-summary .plan-container{
+  display: flex ;
+  justify-content: space-between;
+
+  border-bottom: 1px solid gray ;
+ }
+
+ .price-summary .add-ons{
+  display: flex ;
+  flex-direction: column ;
+ } 
+
+ .price-summary .add-ons .add-on{
+  display: flex ;
+  justify-content: space-between ;
+ } 
+
+ .total{
+  display: flex ;
+  justify-content: space-between ;
+
+  width: 70% ;
+ }
