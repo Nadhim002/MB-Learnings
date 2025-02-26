@@ -225,4 +225,94 @@ const addOnDetailsObject = {
   },
 }
 
-function createSummary() {}
+function createSummary() {
+  let planPeriod
+  let perStrng
+  let planType
+  let totalAmount = 0 
+  let addOnsList = []
+
+  const periodToggle = document.querySelector("#period-toggle")
+
+  if (periodToggle.checked) {
+    planPeriod = "yearly"
+    perStrng = "/yr"
+  } else {
+    planPeriod = "monthly"
+    perStrng = "/mo"
+  }
+
+  const plansInputs = document.querySelectorAll(".plans .plan input")
+  const addOnInputs = document.querySelectorAll(".add-ons .add-on input")
+
+  plansInputs.forEach((plansInput) => {
+    if (plansInput.checked) {
+      planType = plansInput.getAttribute("ID")
+      totalAmount += planDetailsObject[planPeriod][planType]
+    }
+  })
+
+  addOnInputs.forEach((addOnInput) => {
+    if (addOnInput.checked) {
+      addOnsList.push(addOnInput.value)
+    }
+  })
+
+  const priceSummaryDiv = document.querySelector(".price-summary")
+  const planContainer = priceSummaryDiv.querySelector(".plan-container")
+
+  const planTypeDiv = planContainer.querySelector(".plan-type")
+  const planPriceDiv = planContainer.querySelector(".price")
+
+  planTypeDiv.innerText = `${captiliseFirstLetter(
+    planType
+  )} ( ${captiliseFirstLetter(planPeriod)} )`
+  planPriceDiv.innerText = `$${planDetailsObject[planPeriod][planType]}${perStrng}`
+
+  const addOnsDiv = document.querySelector(".price-summary .add-ons")
+
+  const addOnsDivReplacer = document.createElement("DIV")
+  addOnsDivReplacer.classList.add("add-ons")
+  addOnsList.forEach((addOn) => {
+    totalAmount += addOnDetailsObject[planPeriod][addOn]
+    addOnsDivReplacer.appendChild(createAddOnDiv(addOn, planPeriod, perStrng))
+  })
+
+  addOnsDiv.replaceWith(addOnsDivReplacer)
+
+  const totalDiv = document.querySelector(".summary form .total")
+  const totalPrice = totalDiv.querySelector(".price")
+  const totalPricetext = document.createTextNode(`$${totalAmount}${perStrng}`)
+
+  totalPrice.appendChild(totalPricetext)
+  
+}
+
+function createAddOnDiv(addOn, planPeriod, perStrng) {
+  const addOnDiv = document.createElement("DIV")
+  addOnDiv.classList.add("add-on")
+
+  const addOnName = document.createElement("DIV")
+  addOnName.appendChild(
+    document.createTextNode(`${captiliseFirstLetter(addOn, "-")}`)
+  )
+
+  const addOnPrice = document.createElement("DIV")
+  const addOnPricetext = document.createTextNode(
+    `+${addOnDetailsObject[planPeriod][addOn]}${perStrng}`
+  )
+  addOnPrice.appendChild(addOnPricetext)
+
+  addOnDiv.appendChild(addOnName)
+  addOnDiv.appendChild(addOnPrice)
+
+  return addOnDiv
+}
+
+function captiliseFirstLetter(string, delimeter = " ") {
+  const arrayOfWords = string.split(`${delimeter}`)
+
+  return arrayOfWords
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ")
+}

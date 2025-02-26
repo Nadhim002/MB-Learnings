@@ -147,38 +147,38 @@
   visibility: hidden;
 }
 
+/* page 04 */
 
- /* page 04 */
-
- .price-summary{
-  display: flex ;
-  flex-direction: column ;
+.price-summary {
+  display: flex;
+  flex-direction: column;
   background-color: aqua;
 
-  width: 70% ;
+  width: 70%;
+}
 
- }
-
- .price-summary .plan-container{
-  display: flex ;
+.price-summary .plan-container {
+  display: flex;
   justify-content: space-between;
 
-  border-bottom: 1px solid gray ;
- }
+  border-bottom: 1px solid gray;
+}
 
- .price-summary .add-ons{
-  display: flex ;
-  flex-direction: column ;
- } 
+.price-summary .add-ons {
+  display: flex;
+  flex-direction: column;
+}
 
- .price-summary .add-ons .add-on{
-  display: flex ;
-  justify-content: space-between ;
- } 
+.price-summary .add-ons .add-on {
 
- .total{
-  display: flex ;
-  justify-content: space-between ;
+  display: flex;
+  justify-content: space-between;
+  
+}
 
-  width: 70% ;
- }
+.total {
+  display: flex;
+  justify-content: space-between;
+
+  width: 70%;
+}
