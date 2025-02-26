@@ -14,7 +14,7 @@ function moveToNextPage(eventObj) {
     case 1: {
       if (!validatePersonalInfo()) {
         // Add err event Listerner Here
-        formFieldYourinfo.addEventListener("keydown", validateInfoInput)
+        formFieldYourinfo.addEventListener("keyup", validateInfoInput)
         return
       }
       goBackButton.style.visibility = "visible"
@@ -24,6 +24,7 @@ function moveToNextPage(eventObj) {
       break
     }
     case 3: {
+      createSummary()
       break
     }
     case 4: {
@@ -114,7 +115,6 @@ function validateInfoInput() {
   } else {
     removeErr(phoneNumberInput)
   }
-
 }
 
 formFieldYourinfo.addEventListener("click", makeInputBorder)
@@ -150,3 +150,79 @@ function removeErr(inputElement) {
 
   errElement.innerText = ""
 }
+// page 02
+
+const periodToggle = document.querySelector("#period-toggle")
+
+periodToggle.addEventListener("change", planPeriodChange)
+
+function planPeriodChange(eventObj) {
+  let planPeriod
+  let perStrng
+
+  const planInfoDivs = document.querySelectorAll(".plan-info")
+  const planPriceDivs = document.querySelectorAll(".plans .plan-price")
+
+  const addOnPriceDivs = document.querySelectorAll(".add-on .add-on-price")
+
+  // console.log(addOnPriceDivs)
+
+  if (!periodToggle.checked) {
+    planPeriod = "monthly"
+    perStrng = "/mo"
+
+    planInfoDivs.forEach((ele) => {
+      ele.classList.add("extra")
+    })
+  } else {
+    planPeriod = "yearly"
+    perStrng = "/yr"
+
+    planInfoDivs.forEach((ele) => {
+      ele.classList.remove("extra")
+    })
+  }
+
+  planPriceDivs.forEach((planPriceDiv) => {
+    const planType = planPriceDiv.closest("label").getAttribute("for")
+    planPriceDiv.innerText =
+      `$${planDetailsObject[planPeriod][planType]}` + perStrng
+  })
+
+  addOnPriceDivs.forEach((addOnPriceDiv) => {
+    const addOn = addOnPriceDiv.parentElement.getAttribute("ID")
+
+    addOnPriceDiv.innerText =
+      `+$${addOnDetailsObject[planPeriod][addOn]}` + perStrng
+  })
+}
+
+// Page 04
+
+const planDetailsObject = {
+  monthly: {
+    arcade: 9,
+    advanced: 12,
+    pro: 15,
+  },
+  yearly: {
+    arcade: 90,
+    advanced: 120,
+    pro: 150,
+  },
+}
+
+const addOnDetailsObject = {
+  monthly: {
+    "online-service": 1,
+    "larger-storage": 2,
+    "customizable-profile": 2,
+  },
+  yearly: {
+    "online-service": 10,
+    "larger-storage": 20,
+    "customizable-profile": 20,
+  },
+}
+
+function createSummary() {}

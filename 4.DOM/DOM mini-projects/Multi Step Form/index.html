@@ -44,12 +44,11 @@
         </aside>
 
         <div class="content">
-          
           <div class="step-content your-info">
             <form action="" class="form-field">
               <div class="form-description">
                 <h2>Personal Info</h2>
-                
+
                 <p>
                   Please provide your name, email, address, and phone number.
                 </p>
@@ -57,7 +56,7 @@
 
               <div class="input-field">
                 <label for="name">Name</label>
-              
+
                 <input
                   type="text"
                   placeholder="e.g. Mohammed Nadhim"
@@ -65,8 +64,7 @@
                   id="name-input"
                 />
 
-                <p class ="error"></p>
-             
+                <p class="error"></p>
               </div>
 
               <div class="input-field">
@@ -75,12 +73,11 @@
                   type="text"
                   placeholder="e.g. nadhim@mountblue.tech"
                   name="mail-id"
-                  id = "mail-input"
+                  id="mail-input"
                   required
                 />
 
-                <p class ="error"></p>
-
+                <p class="error"></p>
               </div>
 
               <div class="input-field">
@@ -89,11 +86,10 @@
                   type="text"
                   placeholder="e.g. +91 98765 43210"
                   name="phone-number"
-                  id = "phone-number-input"
+                  id="phone-number-input"
                 />
 
-                <p class ="error"></p>
-
+                <p class="error"></p>
               </div>
             </form>
           </div>
@@ -108,22 +104,22 @@
                   <div class="plan">
                     <label for="arcade">
                       <div><img src="assests/icon-arcade.svg" alt="" /></div>
-                      <div>
+                      <div class="plan-info extra">
                         <div>Arcade</div>
-                        <div>price</div>
-                        <div>2 months free</div>
+                        <div class="plan-price">$9/mo</div>
+                        <div class="extra-time">2 months free</div>
                       </div>
                     </label>
-                    <input type="radio" id="arcade" name="plan" />
+                    <input type="radio" id="arcade" name="plan" checked />
                   </div>
 
                   <div class="plan">
-                    <label for="advanced">
+                    <label for="advanced" >
                       <div><img src="assests/icon-advanced.svg" alt="" /></div>
-                      <div>
+                      <div class="plan-info extra">
                         <div>Advanced</div>
-                        <div>price</div>
-                        <div>2 months free</div>
+                        <div class="plan-price" >$12/mo</div>
+                        <div class="extra-time">2 months free</div>
                       </div>
                     </label>
                     <input type="radio" id="advanced" name="plan" />
@@ -132,10 +128,10 @@
                   <div class="plan">
                     <label for="pro">
                       <div><img src="assests/icon-pro.svg" alt="" /></div>
-                      <div>
+                      <div class="plan-info extra">
                         <div>Pro</div>
-                        <div>price</div>
-                        <div>2 months free</div>
+                        <div class="plan-price">$15/mo</div>
+                        <div class="extra-time">2 months free</div>
                       </div>
                     </label>
                     <input type="radio" id="pro" name="plan" />
@@ -144,7 +140,7 @@
 
                 <div class="plan-duration">
                   <div>Monthly</div>
-                  <div><input type="checkbox" /></div>
+                  <div><input type="checkbox" id="period-toggle" /></div>
                   <div>Yearly</div>
                 </div>
               </div>
@@ -159,31 +155,31 @@
               </div>
 
               <div class="add-ons">
-                <div class="add-on">
+                <div class="add-on" id = "online-service">
                   <input type="checkbox" />
                   <div>
                     <h4>Online service</h4>
                     <p>Access to multiplayer games</p>
                   </div>
-                  <div>+$10/yr</div>
+                  <div class="add-on-price">+$1/mo</div>
                 </div>
 
-                <div class="add-on">
+                <div class="add-on" id ="larger-storage">
                   <input type="checkbox" />
                   <div>
                     <h4>Larger storage</h4>
                     <p>Extra 1TB cloud save</p>
                   </div>
-                  <div>+$20/yr</div>
+                  <div class="add-on-price" >+$2/mo</div>
                 </div>
 
-                <div class="add-on">
+                <div class="add-on" id = "customizable-profile" >
                   <input type="checkbox" />
                   <div>
                     <h4>Customizable profile</h4>
                     <p>Custom theme on your profile</p>
                   </div>
-                  <div>+$20/yr</div>
+                  <div class="add-on-price" >+$2/mo</div>
                 </div>
               </div>
             </form>
@@ -202,10 +198,8 @@
             <button class="go-back-button">Go back</button>
             <button class="next-step-button">Next Step</button>
           </div>
-
         </div>
       </div>
     </div>
-
   </body>
 </html>

@@ -76,14 +76,13 @@
   display: flex;
   flex-direction: column;
   gap: 1vh;
-  position: relative ;
-
+  position: relative;
 }
 
 .input-field input {
   padding: 0.75rem;
   /* border: 0px ; */
-  outline: none ;
+  outline: none;
 }
 
 .buttons {
@@ -100,7 +99,7 @@
   top: 0;
   right: 0;
   color: red;
-  visibility:hidden;
+  visibility: hidden;
 }
 
 /* Page 02 */
@@ -122,26 +121,28 @@
 
 .plan-duration {
   display: flex;
-  justify-content: center ;
+  justify-content: center;
 }
 
-.add-ons{
+.add-ons {
   display: flex;
   flex-direction: column;
 }
 
-.add-on{
-  display: flex ;
-  align-items: center ;
-  gap: 1.5vw ;
+.add-on {
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.extra .extra-time {
+  display: none;
 }
 
 .hidden {
   display: none;
 }
 
-.go-back-button{
-  visibility: hidden ;
+.go-back-button {
+  visibility: hidden;
 }
-
-
