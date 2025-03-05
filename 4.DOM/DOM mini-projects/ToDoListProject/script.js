@@ -19,6 +19,7 @@ function editToDo(eventObj) {
     const toDoTextDiv = editIconDiv.previousElementSibling
 
     const inputEle = document.createElement("INPUT")
+    inputEle.value = toDoTextDiv.innerText 
     const saveDiv = document.createElement("DIV")
     saveDiv.innerText = "save"
     saveDiv.className = "save-icon"
@@ -52,6 +53,8 @@ const inputElement = document.querySelector(".to-do-adder")
 inputElement.addEventListener("keydown", addToDo)
 
 function addToDo(eventObj) {
+
+  console.log("Hello")
   if (eventObj.key == "Enter") {
     // Add Element to list-holder-container
     const toDoDiv = createToDoDiv(eventObj.target.value)

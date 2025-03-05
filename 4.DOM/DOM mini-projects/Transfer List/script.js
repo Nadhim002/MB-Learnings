@@ -1,9 +1,18 @@
 const iconDiv = document.querySelector(".icon-div")
 
+let checkedLeft = 0 
+let checkedRight = 0 
+
+
+
+
 iconDiv.addEventListener("click", moveElements)
 
 function moveElements(eventObj) {
+
   const targetElement = eventObj.target.className
+
+  eventObj.preventDefault()
 
   switch (targetElement) {
     case "all-right-to-left":

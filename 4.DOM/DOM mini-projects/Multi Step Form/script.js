@@ -1,5 +1,19 @@
 let currPageIndex = 1
 
+
+  const addOnDetailsObject = {
+    monthly: {
+    "online-service": 1,
+    "larger-storage": 2,
+    "customizable-profile": 2,
+  },
+    yearly: {
+    "online-service": 10,
+    "larger-storage": 20,
+    "customizable-profile": 20,
+  },
+  }
+
 const nextStepButton = document.querySelector(".next-step-button")
 const goBackButton = document.querySelector(".go-back-button")
 const formFieldYourinfo = document.querySelector(".your-info .form-field")
@@ -212,18 +226,6 @@ const planDetailsObject = {
   },
 }
 
-const addOnDetailsObject = {
-  monthly: {
-    "online-service": 1,
-    "larger-storage": 2,
-    "customizable-profile": 2,
-  },
-  yearly: {
-    "online-service": 10,
-    "larger-storage": 20,
-    "customizable-profile": 20,
-  },
-}
 
 function createSummary() {
   let planPeriod
@@ -285,7 +287,7 @@ function createSummary() {
   const totalPricetext = document.createTextNode(`$${totalAmount}${perStrng}`)
 
   totalPrice.appendChild(totalPricetext)
-  
+
 }
 
 function createAddOnDiv(addOn, planPeriod, perStrng) {
