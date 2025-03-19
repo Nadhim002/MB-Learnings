@@ -26,3 +26,9 @@ export default function App() {
   )
 }
 ```
+
+
+useState in React
+
+- component state
+- Global state
