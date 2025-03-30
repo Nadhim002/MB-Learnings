@@ -6,8 +6,8 @@ export default function GameGrid({ currMove, currState, onPlay }) {
   const whoPlayed = (currMove%2 == 0 ) ?  "X" : "O" 
 
   function gridClickhandler(e) {
-    e.preventDefault()
 
+    e.preventDefault()
     const indexOfSelectedBox = e.target.getAttribute("sq_index")
 
     if ( currState[ indexOfSelectedBox ] || isWinnerAvailable( currState ) ){

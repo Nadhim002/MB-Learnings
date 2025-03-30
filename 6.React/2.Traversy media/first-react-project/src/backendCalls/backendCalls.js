@@ -35,7 +35,7 @@ export async function updateJob(job) {
     {
       method: "PUT",
       headers: { "Content-type": "application/json" },
-      body: JSON.stringify(job),
+      body : JSON.stringify(job),
     }
   )
 
